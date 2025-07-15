@@ -28,14 +28,15 @@ h1 {
 }
 
 .input-group label {
-    display: block;
+    display: none;
     margin-bottom: 0.5rem;
     color: #333;
 }
 
 .input-group input {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.5rem;
+    background:#000;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box; /* Important for padding */
@@ -59,7 +60,7 @@ button:hover {
 }
 
 button:disabled {
-    background-color: #a0c7ff;
+
     cursor: not-allowed;
 }
 
