@@ -6,6 +6,7 @@ body {
     height: 100vh;
     background-color: #000;
     margin: 0;
+    color: #fff;
 }
 
 .container, .form-container {
