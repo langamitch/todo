@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">
+                <img src="IMG_6496.jpeg" alt="Logo">
+            </a>
+
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Profile</a>
+                <a href="#" class="nav-link">Settings</a>
+            </div>
+
+            <div class="nav-icons">
+                <button class="nav-icon-btn" id="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-overlay-content">
+            <input type="text" placeholder="Type to search..." class="search-input">
+            <button class="close-btn" id="close-search">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+    <div class="container home-content">
         <h1 id="welcome-message">Loading...</h1>
         <button id="logout-button">Logout</button>
     </div>
