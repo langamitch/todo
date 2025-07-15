@@ -164,6 +164,9 @@ a:hover {
     font-size: 1.2rem;
     color: #fff;
 }
+.nav-toggle i {
+    color: #fff;
+    }
 
 .nav-toggle {
     display: none; /* Hidden on desktop */
