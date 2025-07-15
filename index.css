@@ -231,7 +231,7 @@ a:hover {
         left: 0;
         width: 100%;
         flex-direction: column;
-        background-color: #000;
+        background-color: #fff;
         padding: 1rem 0;
         text-align: center;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -245,6 +245,7 @@ a:hover {
     }
     
     .nav-toggle {
+        color: #fff;
         display: block; /* Shown on mobile */
     }
 }
