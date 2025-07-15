@@ -33,6 +33,12 @@ h1 {
     margin-bottom: 0.5rem;
     color: #333;
 }
+.logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
 
 .input-group input {
     width: 100%;
