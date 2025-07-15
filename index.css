@@ -265,7 +265,7 @@ a:hover {
 
 /* --- RESPONSIVE STYLES --- */
 @media (max-width: 768px) {
-    .nav-menu, .nav-icons {
+    .nav-menu {
         display: none;
     }
 
