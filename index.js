@@ -131,3 +131,32 @@ if (logoutButton) {
         }
     });
 }
+
+// --- Navbar and Search Overlay Logic ---
+
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+const searchIcon = document.getElementById('search-icon');
+const searchOverlay = document.getElementById('search-overlay');
+const closeSearch = document.getElementById('close-search');
+
+// Toggle mobile navigation
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
+
+// Open search overlay
+if (searchIcon && searchOverlay) {
+    searchIcon.addEventListener('click', () => {
+        searchOverlay.classList.add('active');
+    });
+}
+
+// Close search overlay
+if (closeSearch && searchOverlay) {
+    closeSearch.addEventListener('click', () => {
+        searchOverlay.classList.remove('active');
+    });
+}
