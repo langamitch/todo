@@ -6,6 +6,7 @@ body {
     height: 100vh;
     background-color: #000;
     margin: 0;
+    padding:20px;
     color: #fff;
 }
 
@@ -196,7 +197,13 @@ a:hover {
 
 /* Style for the active link */
 .bottom-nav-link.active {
-    color: #0866ff; /* Active color */
+    color: #fff;
+}
+/* --- Add this to your Bottom Navigation Styles --- */
+
+/* This makes the active Google Icon appear filled */
+.bottom-nav-link.active .material-symbols-outlined {
+  font-variation-settings: 'FILL' 1;
 }
 
 /* --- Search Overlay Styles --- */
