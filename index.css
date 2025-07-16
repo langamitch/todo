@@ -185,8 +185,8 @@ a:hover {
     transition: color 0.2s;
 }
 
-.bottom-nav-link i {
-    font-size: 22px;
+.bottom-nav-link span {
+    font-size: 30px;
     margin-bottom: 4px;
 }
 
