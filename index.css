@@ -111,64 +111,92 @@ a:hover {
     100% { transform: rotate(360deg); }
 }
 
-/* --- Navbar Styles --- */
-.navbar {
-    background-color: #000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 0 2rem;
+
+
+/* --- Top Scrolling Navbar --- */
+.top-nav-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    z-index: 100;
 }
 
-.nav-container {
+.top-nav ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    max-width: 1200px;
-    margin: 0 auto;
+    /* Allows the list to scroll horizontally */
+    overflow-x: auto;
+    /* Prevents items from wrapping to a new line */
+    white-space: nowrap;
+    list-style: none;
+    margin: 0;
+    padding: 0 10px;
+    /* Hides the scrollbar */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+/* For Chrome, Safari, and Opera */
+.top-nav ul::-webkit-scrollbar {
+    display: none;
 }
 
-.nav-logo img {
-    height: 40px;
+.top-nav li a {
     display: block;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-link {
-    color: #333;
+    padding: 16px;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    color: #65676b;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 3px solid transparent;
 }
 
-.nav-link:hover {
-    color: #007bff;
+.top-nav li a.active {
+    color: #0866ff;
+    border-bottom-color: #0866ff;
 }
 
-.nav-icons {
+/* --- Bottom Navigation Bar --- */
+.bottom-nav {
+    /* Fixes the bar to the bottom of the viewport */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
     display: flex;
+    /* Distributes items evenly */
+    justify-content: space-around;
     align-items: center;
-    gap: 1rem;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.08);
+    z-index: 100;
 }
 
-.nav-icon-btn, .nav-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #333;
+.bottom-nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #65676b; /* Inactive color */
+    padding: 5px 0;
+    transition: color 0.2s;
 }
 
-.nav-toggle {
-    display: none; /* Hidden on desktop */
+.bottom-nav-link i {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.bottom-nav-text {
+    font-size: 11px;
+}
+
+/* Style for the active link */
+.bottom-nav-link.active {
+    color: #0866ff; /* Active color */
 }
 
 /* --- Search Overlay Styles --- */
