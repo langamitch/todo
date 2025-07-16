@@ -148,8 +148,8 @@ a:hover {
     text-decoration: none;
     color: #65676b;
     font-weight: 600;
-    font-size: 15px;
-    border-bottom: 3px solid transparent;
+    font-size: 13px;
+
 }
 
 .top-nav li a.active {
@@ -180,7 +180,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #ebebeb; /* Inactive color */
+    color: #65676b;; /* Inactive color */
     padding: 5px 0;
     transition: color 0.2s;
 }
