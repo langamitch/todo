@@ -3,62 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Example</title>
-    <link rel="stylesheet" href="index.css">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /></head>
+    <title>Tasks</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-    <header class="top-nav-container">
-        <nav class="top-nav">
-            <ul>
-               
-                <li><a href="#" class="active">For You</a></li>
-                <li><a href="#">Trending</a></li>
-                <li><a href="#">Technology</a></li>
-                <li><a href="#">Science</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Health</a></li>
-                <li><a href="#">Sports</a></li>
-            </ul>
-            
+    <div id="app-container">
+        <header>
+            <h1 id="header-title">Friday, 18 July</h1>
+            <button id="sidebar-toggle" class="icon-button">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </header>
+
+        <div id="view-switcher">
+            <button class="view-button active">Upcoming</button>
+            <button class="view-button">Calendar</button>
+            <button class="view-button">Past</button>
+        </div>
+
+        <main id="main-content">
+            <ul id="task-list">
+                </ul>
+        </main>
+
+        <div id="task-input-bar">
+            <button class="icon-button"><span class="material-symbols-outlined">add</span></button>
+            <input type="text" id="task-input" placeholder="Write a new task...">
+            <button id="add-task-button" class="icon-button">
+                <span class="material-symbols-outlined">arrow_upward</span>
+            </button>
+        </div>
+    </div>
+
+    <aside id="sidebar">
+        <div id="sidebar-header">
+             <button id="sidebar-close" class="icon-button">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div id="profile-section">
+            <img src="https://via.placeholder.com/50" alt="User Avatar" id="avatar">
+            <div id="profile-info">
+                <p>John Doe</p>
+                <small>j.doe@example.com</small>
+            </div>
+        </div>
+        <nav id="sidebar-nav">
+            <a href="#"><span class="material-symbols-outlined">settings</span> Settings</a>
+            <a href="#"><span class="material-symbols-outlined">logout</span> Logout</a>
         </nav>
-    </header>
-
-    <main>
-        
-        <h1>Page Content</h1>
-        <p>This is where your main page content goes. The body has padding to ensure content is not hidden behind the fixed navigation bars.</p>
-    <button id="logout-button">Logout</button>
-    </main>
-
-        <nav class="bottom-nav">
-        <a href="#" class="bottom-nav-link active">
-            <span class="material-symbols-outlined">
-                home
-            </span>
-        </a>
-        <a href="#" id="search-icon" class="bottom-nav-link nav-icon-btn">
-            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z" fill="currentColor"></path></svg></span>
-        </a>
-        <a href="#" class="bottom-nav-link">
-           <span class="material-symbols-outlined">
-                add_2
-           </span>
-        </a>
-        <a href="#" class="bottom-nav-link">
-           <span class="material-symbols-outlined">
-                favorite
-           </span>
-        </a>
-        <a href="#" class="bottom-nav-link">
-            <span class="material-symbols-outlined">
-                settings
-            </span>
-        </a>
-    </nav>
+    </aside>
+    <div id="sidebar-overlay"></div>
 
 
-    <script src="index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+
+    <script src="app.js"></script>
 
 </body>
 </html>
