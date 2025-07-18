@@ -29,9 +29,9 @@ body {
 #app-container {
     width: 100%;
     max-width: 400px; /* Simulates a phone screen */
-    height: 80vh;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
+    height: 100vh;
+    border: none;
+    border-radius: 0px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -48,7 +48,7 @@ header {
 }
 
 header h1 {
-    font-size: 1.25rem;
+    font-size: 13px;
     font-weight: 500;
 }
 
@@ -72,7 +72,7 @@ header h1 {
     padding: 0.5rem 1rem;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
+    font-size: 13px;
     color: var(--text-color-light);
 }
 
